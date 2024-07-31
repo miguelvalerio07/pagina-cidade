@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atenas</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #00fff7 , black, #00fff7);
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #00ffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .caption {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #00f2ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        .button-container button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Atenas - uma cidade com uma cultura rica.</h1>
+        <h2 style="text-align: justify;">Atenas é uma cidade que une o esplendor da antiguidade, com monumentos históricos como o Parthenon, à vitalidade moderna, oferecendo uma rica mistura de cultura, história e vida cosmopolita. Situada na região da Ática, às margens do mar Egeu, Atenas é mais do que apenas a sede da democracia e a berço da filosofia; é uma cidade onde o passado e o presente se entrelaçam em uma tapeçaria rica e diversificada.
+ 
+        </h2>
+        <p>Descubra um pouco mais sobre Atenas</p>
+        <img id="atenas-image" src="imagem1.png" alt="Acrópole de Atenas" />
+        <div id="caption" class="caption">Acrópole de Atenas</div>
+        <div class="button-container">
+            <button onclick="changeImage('atenas 1.jpg', 'Acrópole de Atenas')">Imagem 1</button>
+            <button onclick="changeImage('atenas 2.jpg', 'Teatro de Atenas')">Imagem 2</button>
+            <button onclick="changeImage('atenas 3.jpg', 'Ágora de Atenas')">Imagem 3</button>
+            <button onclick="changeImage('atenas 4.jpg', 'Templo de Zeus')">Imagem 4</button>
+        </div>
+    </div>
+ 
+    <script>
+        function changeImage(src, captionText) {
+            document.getElementById('atenas-image').src = src;
+            document.getElementById('atenas-image').alt = captionText;
+            document.getElementById('caption').textContent = captionText;
+        }
+    </script>
+</body>
+</html>
